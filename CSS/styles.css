@@ -5,3 +5,6 @@ body, h1, ul, ol {
 img:hover {
   color: black;
 }
+
+form { text-align: left; 
+}

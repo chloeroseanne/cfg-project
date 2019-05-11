@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Got A Mustard You Need Reviewing?</title> 
+	<title>The Colonel's Review</title> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="CSS/styles.css">
 
@@ -9,11 +9,11 @@
 
 <div class="container">
   <div class="row">
-    <div class="col"> <a href="https://google.com"> Home </a></div>
+    <div class="col"> <a href="index.html"> Home </a></div>
     <div class="col"> <a href="https://google.com"> Reviews </a></div>
     <div class="col"> <a href="https://google.com"> Recipes </a></div>
     <div class="col"> <a href="https://google.com"> Mustard Map </a></div>
-    <div class="col"> <a href="https://google.com"> Contact </a></div>
+    <div class="col"> <a href="contact.html"> Contact </a></div>
   </div>
 <!-- Bootstrap nav attempt
   <nav class="navbar navbar-light bg-light">
@@ -31,17 +31,38 @@
 
 <body>
 	<div>
-		<H1> The Colonel's Review </H1>
-		<H2> Sniffing Out Great Mustards</H2>
+		<H1> Got A Mustard You Need Reviewing? </H1>
+		<H2> Get In Touch With The Colonel Himself</H2>
 		<br>
 		<img src="./colonel-mustard-head.jpg" alt="hunting mustard" width="300px">
 
 	</div>
 
-<div>
-	<p>
-		Whether you're looking for 
-
+<form>
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Your Name</label>
+        <input type="text" class="form-control" placeholder="First name">
+        <input type="text" class="form-control" placeholder="Last name">
+    </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput2">Your Email</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Tell The Colonel What You Want</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option selected>I want...</option>
+      <option value="1">A Recommendation for Something Specific</option>
+      <option value="2">The Colonel to Review My Mustard!</option>
+      <option value="3">Advice on a Recipe</option>
+      <option value="3">Something Else</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Give The Colonel More Details</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+  </div>
+  <button type="submit" class="btn btn-warning">Submit</button>
 </div>
 </body>
 
