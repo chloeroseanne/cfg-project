@@ -1,10 +1,31 @@
+
 body, h1, ul, ol { 
   	text-align: center;
  }
 
-img:hover {
-  color: black;
-}
+ h1, h2, h3 {
+ 	font-family: 'Satisfy', cursive;
+ }
 
 form { text-align: left; 
+}
+
+/* A link that has not been visited */
+a:link {
+    color: #FAC80A;
+}
+
+/* A link that has been visited */
+a:visited {
+    color: #FAC80A;
+}
+
+/* A link that is hovered on */
+a:hover {
+    color: #BD9600;
+}
+
+/* A link that is selected */
+a:active {
+    color: #FAC80A;
 }
