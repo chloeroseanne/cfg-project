@@ -1,6 +1,7 @@
-html,
-
 body, h1, ul, ol { 
   	text-align: center;
  }
 
+img:hover {
+  color: black;
+}
