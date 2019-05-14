@@ -29,3 +29,12 @@ a:hover {
 a:active {
     color: #FAC80A;
 }
+
+/* Header Colonel image */
+.headimg { 
+	border-radius: 55px;
+}
+
+.headimg:hover {
+	border-radius: 100px;
+}
