@@ -41,5 +41,6 @@ a:active {
 }
 
 .headimg:hover {
-	border-radius: 100px;
+	border-radius: 0px;
+	width: 200px;
 }
