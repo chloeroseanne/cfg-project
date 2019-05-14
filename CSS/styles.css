@@ -1,5 +1,5 @@
 
-body, h1, ul, ol { 
+body, h1, ul, ol {
   	text-align: center;
  }
 
@@ -7,7 +7,11 @@ body, h1, ul, ol {
  	font-family: 'Satisfy', cursive;
  }
 
-form { text-align: left; 
+ body {
+   font-family:'Playfair Display', serif;
+ }
+
+form { text-align: left;
 }
 
 /* A link that has not been visited */
@@ -31,7 +35,7 @@ a:active {
 }
 
 /* Header Colonel image */
-.headimg { 
+.headimg {
 	border-radius: 55px;
 }
 
