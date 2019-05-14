@@ -37,6 +37,7 @@ a:active {
 /* Header Colonel image */
 .headimg {
 	border-radius: 55px;
+	width: 100px;
 }
 
 .headimg:hover {
