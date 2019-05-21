@@ -67,6 +67,16 @@ a:active {
 	width: 200px;
 }
 
+.mustardimg {
+  border-radius: 100px;
+  width: 500px;
+}
+
+.mustardimg:hover {
+  opacity: .5;
+}
+
+
 #map {
  height: 400px;  /* The height is 400 pixels */
   width: 100%;  /* The width is the width of the web page */
