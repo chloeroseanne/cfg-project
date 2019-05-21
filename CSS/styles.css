@@ -30,6 +30,8 @@ h2 {
 
  body {
    font-family:'Playfair Display', serif;
+   margin-left: 250px;
+   margin-right: 250px;
    padding-bottom: 50px;
  }
 
@@ -59,17 +61,14 @@ a:active {
 /* Header Colonel image */
 .headimg {
 	border-radius: 55px;
-	width: 100px;
-}
-
-.headimg:hover {
-	border-radius: 0px;
 	width: 200px;
+  padding-bottom: 30px;
 }
 
 .mustardimg {
   border-radius: 100px;
   width: 500px;
+  margin-bottom: 50px;
 }
 
 .mustardimg:hover {
