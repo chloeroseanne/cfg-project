@@ -7,6 +7,10 @@ body, h1, ul, ol {
  	font-family: 'Satisfy', cursive;
  }
 
+ h1 {
+  font-size: 60px;
+ }
+
  body {
    font-family:'Playfair Display', serif;
  }
@@ -44,3 +48,4 @@ a:active {
 	border-radius: 0px;
 	width: 200px;
 }
+
