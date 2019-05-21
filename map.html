@@ -5,7 +5,14 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="CSS/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
+  <style>  
+    #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+  </style>
 	<!-- Navigation --> 
 
 <div class="container">
@@ -45,20 +52,7 @@
       </a>
     </div>
   </div>
-
-<!-- Bootstrap nav attempt
-  <nav class="navbar navbar-light bg-light">
-  <form class="form-inline">
-    <button class="btn btn-outline-success" type="button"><a href="https://google.com"> Home </a></button>
-    <button class="btn btn-outline-success" type="button"><a href="https://google.com"> Reviews </a></button>
-    <button class="btn btn-outline-success" type="button"><a href="https://google.com"> Recipes </a></button>
-    <button class="btn btn-outline-success" type="button"><a href="https://google.com"> Mustard Map </a></button>
-    <button class="btn btn-outline-success" type="button"><a href="https://google.com"> Contact </a></button>
-  </form>
-</nav>
---> 
 </head>
-
 
 <body>
 	<div>
@@ -66,27 +60,36 @@
 		<H2> Sniffing Out Great Mustards</H2>
 		<br>
 		<img src="images/colonel-mustard-head.jpg" alt="hunting mustard" class="headimg">
-
 	</div>
 
-<div>
-		<p>
-		Mustard is a condiment made from the seeds of a mustard plant. </p>
+<!-- Map --> 
+  <div id="map"></div>
+    <script>
+  function initMap() {
+  // The locations
+    var germany = {lat: 50.443569, lng: 10.168178};
+    var uk = {lat: 52.537870, lng: -1.149187};
+    var us = {lat: 38.221699, lng: -101.7129};
+    var france = {lat: 46.2276, lng: -2.2137};
+    var japan = {lat: 36.2048, lng: 138.2529};
+  // The map 
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 1, center: germany});
+  // The markers
+  var marker = new google.maps.Marker({position: germany, map: map});
+  var marker = new google.maps.Marker({position: uk, map: map});
+  var marker = new google.maps.Marker({position: us, map: map});
+  var marker = new google.maps.Marker({position: france, map: map});
+  var marker = new google.maps.Marker({position: japan, map: map});
+  
+  }
+    </script>
 
-		<p>
-		The whole, ground, cracked, or bruised mustard seeds are mixed with water, vinegar, 
-		lemon juice, wine, or other liquids, salt, and often other flavourings and spices, 
-		to create a paste or sauce ranging in colour from bright yellow to dark brown. 
-		The taste of mustard ranges from sweet to spicy. </p>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnTcrisq2-TXEOR1VvEbm2x-VrgEF3A5c&callback=initMap">
+    </script>
+  </script>
 
-		<p>
-		Commonly paired with meats and cheeses, mustard is also added to sandwiches, hamburgers, 
-		corn dogs, and hot dogs. It is also used as an ingredient in many dressings, glazes, 
-		sauces, soups, and marinades. As a cream or as individual seeds, mustard is used as a 
-		condiment in the cuisine of India and Bangladesh, the Mediterranean, northern and southeastern 
-		Europe, Asia, the Americas, and Africa, making it one of the most popular and widely used spices 
-		and condiments in the world.</p>
-
-</div>
 </body>
+</html>
 
