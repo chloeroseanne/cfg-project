@@ -18,6 +18,16 @@ h2 {
   margin-bottom: 20px;
 }
 
+ h3 {
+  font-size: 35px;
+ }
+
+ h4 {
+  font-family:'Playfair Display', serif;
+  font-size: 14px;
+
+ }
+
  body {
    font-family:'Playfair Display', serif;
  }
@@ -54,5 +64,10 @@ a:active {
 .headimg:hover {
 	border-radius: 0px;
 	width: 200px;
+}
+
+#map {
+ height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
 }
 
