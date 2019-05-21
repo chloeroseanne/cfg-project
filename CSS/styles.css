@@ -9,13 +9,13 @@ body, h1, ul, ol {
 
  h1 {
   font-size: 65px;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-top: 50px;
+  margin-bottom: 20px;
  }
 
 h2 {
   font-size: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
  h3 {
@@ -30,6 +30,7 @@ h2 {
 
  body {
    font-family:'Playfair Display', serif;
+   padding-bottom: 50px;
  }
 
 form { text-align: left;
@@ -70,4 +71,3 @@ a:active {
  height: 400px;  /* The height is 400 pixels */
   width: 100%;  /* The width is the width of the web page */
 }
-
