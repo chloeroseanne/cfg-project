@@ -61,6 +61,10 @@
 <script>
 function initMap() {
   var germany = {lat: 50.443569, lng: 10.168178};
+  var uk = {lat: 52.537870, lng: -1.149187};
+  var us = {lat: 38.221699, lng: -101.7129};
+  var france = {lat: 46.2276, lng: -2.2137};
+  var japan = {lat: 36.2048, lng: 138.2529};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 4,
     center: germany
@@ -71,15 +75,39 @@ function initMap() {
       '</div>'+
       '<h3 id="firstHeading" class="firstHeading">Germany</h2>'+
       '<div id="bodyContent">'+
-      '<p><b>German mustard</b> is generally pale and smooth, more brown than yellow, and maltier' +
-      ' than it`s European counterparts. With mineral-rich waters and unfiltered spirt vinegar'+
-      '(produced largely in Dusseldorf), German mustards are creamy and sour,'+
-      'best eaten of course with sausages and strong meats.</p>'+
+      '<p><h4>German mustard is generally pale and smooth, more brown than yellow, and maltier ' +
+      'than its European counterparts. With mineral-rich waters and unfiltered spirt vinegar '+
+      '(produced largely in Dusseldorf), German mustards are creamy and sour, '+
+      'best eaten of course with sausages and strong meats.</h4></p>'+
       '</div>'+
       '</div>';
 
   var infowindow = new google.maps.InfoWindow({
     content: contentString
+  });
+  
+  var marker = new google.maps.Marker({
+    position: uk,
+    map: map,
+    title: 'English Mustard'
+  });
+  
+  var marker = new google.maps.Marker({
+    position: japan,
+    map: map,
+    title: 'Japanese Mustard'
+  });
+  
+  var marker = new google.maps.Marker({
+    position: us,
+    map: map,
+    title: 'American Mustard'
+  });
+  
+  var marker = new google.maps.Marker({
+    position: france,
+    map: map,
+    title: 'French Mustard'
   });
 
   var marker = new google.maps.Marker({
@@ -87,9 +115,11 @@ function initMap() {
     map: map,
     title: 'German Mustard'
   });
-  marker.addListener('click', function() {
+  
+   marker.addListener('click', function() {
     infowindow.open(map, marker);
-  });
+  }); 
+
 }
 </script>
 <script async defer

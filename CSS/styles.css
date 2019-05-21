@@ -13,14 +13,20 @@ body, h1, ul, ol {
   margin-bottom: 10px;
  }
 
- h3 {
-  font-size: 35px;
- }
-
 h2 {
   font-size: 45px;
   margin-bottom: 20px;
 }
+
+ h3 {
+  font-size: 35px;
+ }
+
+ h4 {
+  font-family:'Playfair Display', serif;
+  font-size: 14px;
+
+ }
 
  body {
    font-family:'Playfair Display', serif;
