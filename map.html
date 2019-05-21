@@ -8,12 +8,6 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-  <style>  
-    #map {
-        height: 400px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-       }
-  </style>
 	<!-- Navigation --> 
 <div class="container">
   <div class="row">
@@ -51,44 +45,56 @@
         <img src="icons/pint.svg" width="50px"> 
       </a>
     </div>
-  </div
+  </div>
 
-<!-- End of Navigation --> 
+<!-- !-- End of Navigation --> 
 
 <body>
 	<div>
 		<H1> The Colonel's Review </H1>
-		<H2> Sniffing Out Great Mustards</H2>
+		<H2> A World of Mustard</H2>
 	</div>
 
-<!-- Map --> 
-  <div id="map"></div>
-    <script>
-  function initMap() {
-  // The locations
-    var germany = {lat: 50.443569, lng: 10.168178};
-    var uk = {lat: 52.537870, lng: -1.149187};
-    var us = {lat: 38.221699, lng: -101.7129};
-    var france = {lat: 46.2276, lng: -2.2137};
-    var japan = {lat: 36.2048, lng: 138.2529};
-  // The map 
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 1, center: germany});
-  // The markers
-  var marker = new google.maps.Marker({position: germany, map: map});
-  var marker = new google.maps.Marker({position: uk, map: map});
-  var marker = new google.maps.Marker({position: us, map: map});
-  var marker = new google.maps.Marker({position: france, map: map});
-  var marker = new google.maps.Marker({position: japan, map: map});
-  
-  }
-    </script>
 
-    <script async defer
+<!-- Map with Marker -->
+<div id="map"></div>
+<script>
+function initMap() {
+  var germany = {lat: 50.443569, lng: 10.168178};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: germany
+  });
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Germany</h2>'+
+      '<div id="bodyContent">'+
+      '<p><b>German mustard</b> is generally pale and smooth, more brown than yellow, and maltier' +
+      ' than it`s European counterparts. With mineral-rich waters and unfiltered spirt vinegar'+
+      '(produced largely in Dusseldorf), German mustards are creamy and sour,'+
+      'best eaten of course with sausages and strong meats.</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker = new google.maps.Marker({
+    position: germany,
+    map: map,
+    title: 'German Mustard'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}
+</script>
+<script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnTcrisq2-TXEOR1VvEbm2x-VrgEF3A5c&callback=initMap">
-    </script>
-  </script>
-
+</script>
 </body>
 </html>
 
